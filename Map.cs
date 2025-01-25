@@ -72,7 +72,6 @@ public class Map : MonoBehaviour
                     {
                         _mapData[i, j] = GameDef.MapTileType.Wall;
                     }
-                    //_mapData[i, j] = (GameDef.MapTileType)UnityEngine.Random.Range(1, 3);    // 使用 Unity 的随机数生成器
                 }
                 var tile = Instantiate(_goMapTile, _maoGroup).GetComponent<Tile>();
                 _mapTiles[i, j] = tile;
@@ -129,7 +128,7 @@ public class Map : MonoBehaviour
     /// <summary>
     /// 迭代地图(新)
     /// </summary>
-    public void IterationMapNew()
+    private void IterationMapNew()
     {
         IterationMapOnce();
 
@@ -180,7 +179,7 @@ public class Map : MonoBehaviour
         _mapData = (GameDef.MapTileType[,]) mapDataCopy.Clone();
     }
 
-    public void RedrawMap()
+    private void RedrawMap()
     {
         for (int i = 0; i < mapSizeX; i++)
         {
