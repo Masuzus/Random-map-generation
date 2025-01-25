@@ -1,16 +1,12 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using Object = System.Object;
-using Random = System.Random;
 
 public class Map : MonoBehaviour
 {
     public int seed = 1846128673;
-    public int mapSizeX = 18;
-    public int mapSizeY = 18;
+    public int mapSizeX = 100;
+    public int mapSizeY = 100;
     
     private Transform _maoGroup;
     private GameObject _goMapTile;
